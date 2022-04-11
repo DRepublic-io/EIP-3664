@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.0;
 
-import "openzeppelin-solidity/contracts/utils/Context.sol";
-import "openzeppelin-solidity/contracts/utils/Strings.sol";
-import "openzeppelin-solidity/contracts/utils/introspection/ERC165.sol";
+import "@openzeppelin/contracts/utils/Context.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 import "./IERC3664.sol";
 import "./extensions/IERC3664Metadata.sol";
 
