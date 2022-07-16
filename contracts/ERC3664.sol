@@ -402,7 +402,7 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
     }
 
     function _asSingletonArray(uint256 element)
-        internal
+        internal virtual
         pure
         returns (uint256[] memory)
     {
