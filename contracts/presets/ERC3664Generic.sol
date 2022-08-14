@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 
 import "../ERC3664.sol";
-import "openzeppelin-solidity/contracts/access/AccessControlEnumerable.sol";
+import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 
 contract ERC3664Generic is ERC3664, AccessControlEnumerable {
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");

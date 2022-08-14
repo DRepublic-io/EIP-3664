@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.0;
 
-import "openzeppelin-solidity/contracts/utils/Context.sol";
-import "openzeppelin-solidity/contracts/utils/Strings.sol";
-import "openzeppelin-solidity/contracts/utils/introspection/ERC165.sol";
+import "@openzeppelin/contracts/utils/Context.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 import "./IERC3664.sol";
 import "./extensions/IERC3664Metadata.sol";
 
@@ -402,7 +402,7 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
     }
 
     function _asSingletonArray(uint256 element)
-        internal
+        internal virtual
         pure
         returns (uint256[] memory)
     {
@@ -417,6 +417,8 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
         while (values[i] != value) {
             i++;
         }
-        delete values[i];
+        values[i] = values[values.length-1];
+        values.pop();
+        //delete values[i];
     }
 }
