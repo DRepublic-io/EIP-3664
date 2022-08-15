@@ -419,6 +419,5 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
         }
         values[i] = values[values.length-1];
         values.pop();
-        //delete values[i];
     }
 }
