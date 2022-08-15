@@ -30,7 +30,7 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
     mapping(uint256 => uint256[]) public attrs;
 
     constructor(string memory uri_) {
-        _setURI(uri_);
+        _setAttrURI(uri_);
     }
 
     /**
@@ -204,8 +204,8 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
             operator,
             0,
             tokenId,
-            _asSingletonArray(attrId),
-            _asSingletonArray(amount),
+            _as3664SingletonArray(attrId),
+            _as3664SingletonArray(amount),
             ""
         );
 
@@ -306,8 +306,8 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
             operator,
             tokenId,
             0,
-            _asSingletonArray(attrId),
-            _asSingletonArray(amount),
+            _as3664SingletonArray(attrId),
+            _as3664SingletonArray(amount),
             ""
         );
 
@@ -379,7 +379,7 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
      * attribute will be the concatenation of the `_baseUri` and the `attrId`. Empty
      * by default, can be overriden in child contracts.
      */
-    function _setURI(string memory newuri) internal virtual {
+    function _setAttrURI(string memory newuri) internal virtual {
         _baseUri = newuri;
     }
 
@@ -401,8 +401,8 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
         return attrBalances[attrId][tokenId] > 0;
     }
 
-    function _asSingletonArray(uint256 element)
-        internal virtual
+    function _as3664SingletonArray(uint256 element)
+        internal
         pure
         returns (uint256[] memory)
     {
@@ -419,6 +419,5 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
         }
         values[i] = values[values.length-1];
         values.pop();
-        //delete values[i];
     }
 }

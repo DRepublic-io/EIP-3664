@@ -25,8 +25,8 @@ abstract contract ERC3664Updatable is ERC3664, IERC3664Updatable {
             operator,
             tokenId,
             0,
-            _asSingletonArray(attrId),
-            _asSingletonArray(amount),
+            _as3664SingletonArray(attrId),
+            _as3664SingletonArray(amount),
             ""
         );
 
@@ -58,8 +58,8 @@ abstract contract ERC3664Updatable is ERC3664, IERC3664Updatable {
             operator,
             0,
             tokenId,
-            _asSingletonArray(attrId),
-            _asSingletonArray(amount),
+            _as3664SingletonArray(attrId),
+            _as3664SingletonArray(amount),
             ""
         );
 
@@ -90,8 +90,8 @@ abstract contract ERC3664Updatable is ERC3664, IERC3664Updatable {
             operator,
             tokenId,
             0,
-            _asSingletonArray(attrId),
-            _asSingletonArray(amount),
+            _as3664SingletonArray(attrId),
+            _as3664SingletonArray(amount),
             ""
         );
 

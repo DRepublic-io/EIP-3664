@@ -84,8 +84,8 @@ abstract contract ERC3664Transferable is ERC3664, IERC3664Transferable {
             operator,
             from,
             to,
-            _asSingletonArray(attrId),
-            _asSingletonArray(amount),
+            _as3664SingletonArray(attrId),
+            _as3664SingletonArray(amount),
             ""
         );
 
