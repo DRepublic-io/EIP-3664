@@ -204,8 +204,8 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
             operator,
             0,
             tokenId,
-            _asSingletonArray(attrId),
-            _asSingletonArray(amount),
+            _as3664SingletonArray(attrId),
+            _as3664SingletonArray(amount),
             ""
         );
 
@@ -306,8 +306,8 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
             operator,
             tokenId,
             0,
-            _asSingletonArray(attrId),
-            _asSingletonArray(amount),
+            _as3664SingletonArray(attrId),
+            _as3664SingletonArray(amount),
             ""
         );
 
@@ -401,8 +401,8 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
         return attrBalances[attrId][tokenId] > 0;
     }
 
-    function _asSingletonArray(uint256 element)
-        internal virtual
+    function _as3664SingletonArray(uint256 element)
+        internal
         pure
         returns (uint256[] memory)
     {
