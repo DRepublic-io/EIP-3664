@@ -30,7 +30,7 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
     mapping(uint256 => uint256[]) public attrs;
 
     constructor(string memory uri_) {
-        _setURI(uri_);
+        _setAttrURI(uri_);
     }
 
     /**
@@ -379,7 +379,7 @@ contract ERC3664 is Context, ERC165, IERC3664, IERC3664Metadata {
      * attribute will be the concatenation of the `_baseUri` and the `attrId`. Empty
      * by default, can be overriden in child contracts.
      */
-    function _setURI(string memory newuri) internal virtual {
+    function _setAttrURI(string memory newuri) internal virtual {
         _baseUri = newuri;
     }
 
